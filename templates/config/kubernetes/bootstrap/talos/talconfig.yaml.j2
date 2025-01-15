@@ -29,11 +29,10 @@ nodes:
   #% for item in node_inventory %#
   - hostname: "#{ item.name }#"
     ipAddress: "#{ item.address }#"
-    #% if item.disk.startswith('/') %#
+    #% if item.disk is defined %#
     installDisk: "#{ item.disk }#"
     #% else %#
-    installDiskSelector:
-      serial: "#{ item.disk }#"
+    installDiskSelector: #{ item.diskselector | tojson }#
     #% endif %#
     machineSpec:
       secureboot: #{ true if secureboot.enabled else false | lower }#
