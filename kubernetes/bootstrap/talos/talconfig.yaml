@@ -36,11 +36,11 @@ nodes:
     controlPlane: true
     networkInterfaces:
       - interface: "eno1"
+        mtu: 9000
         vlans:
           - vlanId: 168
             addresses:
               - "192.168.168.21/24"
-            mtu: 9000
             routes:
               - network: "0.0.0.0/0"
                 gateway: "192.168.168.1"
@@ -55,11 +55,11 @@ nodes:
     controlPlane: true
     networkInterfaces:
       - interface: "eno1"
+        mtu: 9000
         vlans:
           - vlanId: 168
             addresses:
               - "192.168.168.22/24"
-            mtu: 9000
             routes:
               - network: "0.0.0.0/0"
                 gateway: "192.168.168.1"
@@ -74,11 +74,11 @@ nodes:
     controlPlane: true
     networkInterfaces:
       - interface: "eno1"
+        mtu: 9000
         vlans:
           - vlanId: 168
             addresses:
               - "192.168.168.23/24"
-            mtu: 9000
             routes:
               - network: "0.0.0.0/0"
                 gateway: "192.168.168.1"
