@@ -36,7 +36,7 @@ def validate_node(node: dict, node_cidr: str) -> None:
         raise ValueError(f"Invalid node disk {node.get('disk')} for {node.get('name')}, must be not empty")
     if not node.get('disk') and not node.get('diskselector'):
         raise ValueError(f"Invalid node diskselector {node.get('diskselector')} for {node.get('name')}, must be not empty when disk is not set")
-    if not node.get('mac_addr') or not re.match(r"^([0-9a-f]{2}[:]){5}([0-9a-f]{2})$", node.get('mac_addr')):
+    if not node.get('interface') and (not node.get('mac_addr') or not re.match(r"^([0-9a-f]{2}[:]){5}([0-9a-f]{2})$", node.get('mac_addr'))):
         raise ValueError(f"Invalid node mac_addr {node.get('mac_addr')} for {node.get('name')}, must be not empty and match ([0-9a-f]{{2}}[:]){{5}}([0-9a-f]{{2}})")
     if not re.match(r"^[a-z0-9]{64}$", node.get('schematic_id')):
         raise ValueError(f"Invalid node schematic_id {node.get('schematic_id')} for {node.get('name')}, must match [a-z0-9]{64}")

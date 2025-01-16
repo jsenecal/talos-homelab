@@ -39,8 +39,12 @@ nodes:
     talosImageURL: factory.talos.dev/installer#{ "-secureboot" if secureboot.enabled else ""}#/#{ item.schematic_id }#
     controlPlane: #{ (item.controller) | string | lower }#
     networkInterfaces:
-      - deviceSelector:
+      - #% if item.interface is defined %#
+        interface: "#{ item.interface }#"
+        #% else %#
+        deviceSelector:
           hardwareAddr: "#{ item.mac_addr | lower }#"
+        #% endif %#
         #% if vlan %#
         vlans:
           - vlanId: #{ vlan }#

@@ -32,11 +32,10 @@ nodes:
     installDiskSelector: {"wwid": "naa.6c81f660f1a70e002f18116e21b6d7ef"}
     machineSpec:
       secureboot: True
-    talosImageURL: factory.talos.dev/installer-secureboot/35279b1376ef43b4dbfb9cec5fb694e88c91002d4034d95093fa358452f6a0d2
+    talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "24:6e:96:93:10:c8"
+      -         interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
@@ -52,11 +51,10 @@ nodes:
     installDiskSelector: {"wwid": "naa.6c81f660e6d1ad002f1848a205a865fb"}
     machineSpec:
       secureboot: True
-    talosImageURL: factory.talos.dev/installer-secureboot/35279b1376ef43b4dbfb9cec5fb694e88c91002d4034d95093fa358452f6a0d2
+    talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "24:6e:96:6e:08:00"
+      -         interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
@@ -72,11 +70,10 @@ nodes:
     installDiskSelector: {"wwid": "naa.6b8ca3a0e90f80002f184a5f04f3d045"}
     machineSpec:
       secureboot: True
-    talosImageURL: factory.talos.dev/installer-secureboot/35279b1376ef43b4dbfb9cec5fb694e88c91002d4034d95093fa358452f6a0d2
+    talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "24:6e:96:c1:3d:a8"
+      -         interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
