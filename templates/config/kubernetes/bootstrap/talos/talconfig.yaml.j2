@@ -45,12 +45,12 @@ nodes:
         deviceSelector:
           hardwareAddr: "#{ item.mac_addr | lower }#"
         #% endif %#
+        mtu: #{ item.mtu | default(1500, true) }#
         #% if vlan %#
         vlans:
           - vlanId: #{ vlan }#
             addresses:
               - "#{ item.address }#/#{ node_network.split('/') | last }#"
-            mtu: #{ item.mtu | default(1500, true) }#
             routes:
               - network: "0.0.0.0/0"
                 #% if node_default_gateway %#
@@ -73,7 +73,6 @@ nodes:
             #% else %#
             gateway: "#{ node_network | nthhost(1) }#"
             #% endif %#
-        mtu: #{ item.mtu | default(1500, true) }#
         #% if item.controller %#
         vip:
           ip: "#{ controller_vip }#"
