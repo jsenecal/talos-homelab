@@ -35,7 +35,7 @@ nodes:
     talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      -         interface: "eno1"
+      - interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
@@ -54,7 +54,7 @@ nodes:
     talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      -         interface: "eno1"
+      - interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
@@ -73,7 +73,7 @@ nodes:
     talosImageURL: factory.talos.dev/installer-secureboot/d903882d6e99f0dbfbeb688fddfbbe4a2db57b3a14b17331c3dedd5eda8ffad3
     controlPlane: true
     networkInterfaces:
-      -         interface: "eno1"
+      - interface: "eno1"
         vlans:
           - vlanId: 168
             addresses:
